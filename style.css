@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@300;400&family=Nunito+Sans:wght@300;400&family=Nunito:wght@300;400;500&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 1px;
+    transition: 2s;
+    background-color: #58355E;
+}
+
+
+header .logo{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+header .menu, a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0px 30px;
+    transition: 0.3s;
+    transition-property: color;
+}
+
+header .menu, a:hover{
+    color: #D2CBCB;
+}
+
+header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* >>>>>>> THIS CSS PROPERTY CHANGES THE HEADER BACKGROUND COLOR >>>>>>>*/
+header.sticky{
+    background-color: #2B2D42;
+}
+
+header.sticky a{
+    color: #fff;
+}
+
+header.sticky a:hover{
+    color: #D2CBCB;
+}
+
+.section-main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.section-main, h1{
+    color: #001018;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 80px;
+    letter-spacing: 2px;
+}
+
+.section-two{
+    min-height: 100vh;
+    background: #fff;
+    padding: 20px 100px;
+}
+
+.section-two h2{
+    color: #001018;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.section-two p{
+    font-size: 18px;
+    color: #001018;
+    margin: 25px 0;
+
+}
+
+@media  (max-width: 1060px){
+    header .btn{
+        display: block;
+       
+    }
+
+    header.sticky .menu{
+        background-color: #2B2D42;
+        transition: 2s;
+    }
+
+    header .logo{
+        padding-right: 100px;
+    }
+
+    header .menu{
+        position: fixed;
+        background: #58355E;
+        flex-direction: column;
+        min-width: 300px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        transition: 1.3s ;
+    }
+
+    header .menu.active{
+        transition: 1.3s;
+        right: -7%;
+    }
+
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+    }
+
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 15px ;
+    }
+
+}
+
+@media (max-width: 630px){
+    .section-main h1{
+        font-size: 50px;
+        line-height: 60px;
+         
+    }
+}
